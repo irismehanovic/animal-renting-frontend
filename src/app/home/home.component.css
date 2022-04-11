@@ -1,146 +1,18 @@
-*{
-  margin: 0;
-}
-
-body{
-  font-family: Aleo, serif;
-}
-
-header{
-  background: #e68fac;
+.choice {
   display: flex;
-  justify-content: space-around;
-  align-content: center;
-  height: 70px;
-  margin: 0;
-}
-
-header div{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-header div p{
-  font-weight: bold;
-  font-size: 35px;
-}
-
-header img{
-  margin-left: 5px;
-  height: 40px;
-  width: 65px;
-}
-.search {
-  align-content: center;
-  margin-top: 20px;
-  border: 1px solid grey;
-  border-radius: 7px;
-  height: 25px;
-  width: 250px;
-  padding: 2px 23px 2px 30px;
-  outline: 0;
-  background-color: #f5f5f5;
-}
-
-.search:hover, .search:focus {
-  border: 1.5px solid #009688;
-  background-color: white;
-}
-
-
-ul li{
-  display: inline;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px;
-}
-
-ul li a{
-  text-decoration: none;
-  font-size: 13px;
-  padding: 9px;
-  font-weight: bold;
-  color: antiquewhite;
-  border-radius: 9px;
-}
-
-ul li a:hover{
-  color: white;
-  border: 1px solid white;
-}
-
-main{
+  width: 800px;
   margin: 0 auto;
-  width: 1100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
-
-.cat{
-  height: 100px;
-  width: 100px;
-}
-
-.dog{
-  height: 100px;
-  width: 100px;
-}
-
-.rent-button{
-  background-color: #ffe4e1;
-  margin: 30px;
-  margin-top: 60px;
-  height: 200px;
-  width: 400px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  color: black;
-  font-weight: bold;
-  font-size: 30px;
-  border: 1px solid hotpink;
-}
-
-main button:hover{
-  background-color: #e5ccc9;
-  border: 1.5px solid hotpink;
-}
-
-nav{
-  align-items: center;
-  display: block;
-  justify-content: space-evenly;
-  background-color: #ffe4e1;
-  width: 200px;
-  height: 300px;
-  margin: 10px;
-  border-radius: 5px;
-  border: 1px solid hotpink;
-}
-
-nav img{
-  width: 200px;
-  height: 160px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-nav p{
+.directive {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 65px 92px;
   text-align: center;
+  font-size: 36px;
+  border-radius: 10px;
 }
-
-nav button{
-  margin-top: 8px;
-  width: 80px;
-  height: 30px;
-  color: darksalmon;
-  font-size: 15px;
-  font-weight: bold;
-  border-radius: 5px;
-  border: 1px solid hotpink;
+.directive:hover {
+  padding: 70px 98px;
 }

@@ -1,0 +1,44 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  float: left;
+}
+li a {
+  margin-left: 20px;
+  color: white;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+}
+li a:hover {
+  background-color: #ff8786;
+  border-radius: 7px;
+}
+.nav-bar span {
+  margin-left: 20px;
+}
+.nav-bar {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sign {
+  margin-right: 10px;
+  font-size: 22px;
+}
+.second-bar .span {
+  margin-left: 20px;
+  font-size: 40px;
+}
+
+
