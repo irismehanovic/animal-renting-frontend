@@ -1,39 +1,38 @@
- <mat-toolbar color="warn">
-    <button mat-icon-button class="example-icon" aria-label="home icon">
-      <mat-icon>home</mat-icon>
-    </button>
-    <div class="nav-bar">
-      <span>Home</span>
-      <ul>
-          <li><a href="#categories">Categories</a></li>
-          <li><a href="#owners">Owners</a></li>
-          <li><a href="#about">About</a></li>
-      </ul>
-    </div>
-    <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="icon that leads to the favorited animals">
-      <mat-icon>favorite</mat-icon>
-    </button>
-  </mat-toolbar>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animal Renting</title>
 
-<div class="second-bar">
-  <p>
-    <mat-toolbar color="accent">
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <mat-icon>pets</mat-icon>
-      </button>
-  <span>Animal Renting</span>
-  <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="profile">
-    <mat-icon>person</mat-icon>
-  </button>
-  <button class="sign">Sign In</button>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="register">
-        <mat-icon>check_circle_outline</mat-icon>
-      </button>
-  <button class="sign">Register</button>
-  </mat-toolbar>
-</div>
+  <link rel="stylesheet" href="header.component.css" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+  <div>
+    <button mat-icon-button color="white" routerLink="/home"> <mat-icon>home</mat-icon> </button>
+    <p>PET RENT</p>
+    <img src="assets/paws.png" alt="paws">
+  </div>
+  <input class="search" type="text" placeholder="Search for a pet">
+  <div>
+    <ul>
+      <li>
+        <a href="#">Log In</a>
+      </li>
+      <li>
+        <a routerLink="/sign-up" routerLinkActive="active">Sign Up</a>
+      </li>
+      <li>
+        <a routerLink="/post-animal" routerLinkActive="active">Post Animal</a>
+      </li>
+    </ul>
+  </div>
+</header>
 
 
 
+</body>
+</html>

@@ -1,18 +1,82 @@
-.choice {
-  display: flex;
-  width: 800px;
+*{
+  margin: 0;
+}
+
+body{
+  font-family: Aleo, serif;
+}
+
+main{
   margin: 0 auto;
-  justify-content: space-between;
+  width: 1100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.directive {
-  background-color: red;
-  border: none;
-  color: white;
-  padding: 65px 92px;
+
+.cat{
+  height: 100px;
+  width: 100px;
+}
+
+.dog{
+  height: 100px;
+  width: 100px;
+}
+
+.rent-button{
+  background-color: #ffe4e1;
+  margin: 30px;
+  margin-top: 60px;
+  height: 200px;
+  width: 400px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  border: 1px solid hotpink;
+}
+
+main button:hover{
+  background-color: #e5ccc9;
+  border: 1.5px solid hotpink;
+}
+
+nav{
+  align-items: center;
+  display: block;
+  justify-content: space-evenly;
+  background-color: #ffe4e1;
+  width: 200px;
+  height: 300px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid hotpink;
+}
+
+nav img{
+  width: 200px;
+  height: 160px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+nav p{
   text-align: center;
-  font-size: 36px;
-  border-radius: 10px;
 }
-.directive:hover {
-  padding: 70px 98px;
+
+nav button{
+  margin-top: 8px;
+  width: 80px;
+  height: 30px;
+  color: darksalmon;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid hotpink;
 }

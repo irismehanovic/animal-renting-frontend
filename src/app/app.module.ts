@@ -10,7 +10,6 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatFormFieldModule} from "@angular/material/form-field";
 // the name userdashboard should have been PostAnimalDashboard but I have renamed the file afterwards so it stayed like this
 import {MatButtonModule} from "@angular/material/button";
-import { OwnerListComponent } from './owner-list/owner-list.component';
 import {OwnerService} from "./owner.service";
 
 @NgModule({
@@ -18,7 +17,6 @@ import {OwnerService} from "./owner.service";
     AppComponent,
     HeaderComponent,
     RoutingComponents,
-    OwnerListComponent,
   ],
     imports: [
         BrowserModule,
