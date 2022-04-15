@@ -11,12 +11,16 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 // the name userdashboard should have been PostAnimalDashboard but I have renamed the file afterwards so it stayed like this
 import {MatButtonModule} from "@angular/material/button";
 import {OwnerService} from "./owner.service";
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { LogInComponent } from './log-in/log-in.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     RoutingComponents,
+    UserProfileComponent,
+    LogInComponent,
   ],
     imports: [
         BrowserModule,
