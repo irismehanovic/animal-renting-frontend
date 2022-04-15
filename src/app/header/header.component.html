@@ -1,7 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
   <title>Animal Renting</title>
 
   <link rel="stylesheet" href="header.component.css" type="text/css">
@@ -9,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
+
 <header>
   <div>
     <button mat-icon-button color="white" routerLink="/home"> <mat-icon>home</mat-icon> </button>
@@ -20,19 +18,19 @@
   <div>
     <ul>
       <li>
-        <a href="#">Log In</a>
+        <a target="_self" routerLink="/log-in" routerLinkActive="active">Log In</a>
       </li>
       <li>
-        <a routerLink="/sign-up" routerLinkActive="active">Sign Up</a>
+        <a target="_self" routerLink="/sign-up" routerLinkActive="active">Sign Up</a>
       </li>
       <li>
-        <a routerLink="/post-animal" routerLinkActive="active">Post Animal</a>
+        <a target="_self" routerLink="/post-animal" routerLinkActive="active">Post Animal</a>
+      </li>
+      <li>
+        <a target="_self" routerLink="/user-profile" routerLinkActive="active">Profile</a>
       </li>
     </ul>
   </div>
 </header>
 
 
-
-</body>
-</html>

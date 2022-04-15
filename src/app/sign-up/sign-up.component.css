@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h2{
+  padding: 15px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.picture img{
+  height: 150px;
+  width: 150px;
+}
+
+.picture{
+  text-align: center;
+}
+
+button{
+}
+
+.form{
+  text-align: center;
+  padding: 5px;
+}
+
+div input{
+  border-radius: 3px;
+  padding: 10px;
+  border: none;
+  width: 250px;
+  display: inline-block;
+  background: #f1f1f1;
+}
+
+div input:focus{
+  outline: none;
+  background-color: #ddd;
+}
+
+
