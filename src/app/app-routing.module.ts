@@ -1,22 +1,35 @@
 import { NgModule } from '@angular/core';
+// @ts-ignore
 import { RouterModule, Routes } from '@angular/router';
 import {HomeComponent} from './home/home.component';
-import {UserDashboardComponent} from "./post-animal/post-animal.component";
+import {PostAnimalComponent} from "./post-animal/post-animal.component";
 import {OwnerListComponent} from "./owner-list/owner-list.component";
 import {SignUpComponent} from "./sign-up/sign-up.component";
+import {SignInComponent} from "./sign-in/sign-in.component";
 import {UserProfileComponent} from "./user-profile/user-profile.component";
 import {LogInComponent} from "./log-in/log-in.component";
-// the name userdashboard should have been PostAnimalDashboard but I have renamed the file afterwards so it stayed like this
-
+import {Route} from './constants/route.constants';
+import {AnimalFormContainerComponent} from "./containers/animal-form-container/animal-form-container.component";
+import {AnimalFormComponent} from "./components/animal-form/animal-form.component";
 
 const routes: Routes = [
+  {
+    path: Route.EMPTY,
+    component: HomeComponent
+  },
   {
     path: 'home',
     component: HomeComponent
   },
   {
     path: 'post-animal',
-   component: UserDashboardComponent
+   component: PostAnimalComponent,
+    children: [
+        {
+          path: 'create-animal',
+          component: AnimalFormComponent,
+        },
+      ]
   },
   {
     path: 'owners',
@@ -25,6 +38,10 @@ const routes: Routes = [
   {
     path: 'sign-up',
     component: SignUpComponent
+  },
+  {
+    path: 'sign-in',
+    component: SignInComponent
   },
   {
     path:'user-profile',
@@ -42,4 +59,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const RoutingComponents = [HomeComponent, UserDashboardComponent, OwnerListComponent, SignUpComponent, UserProfileComponent, LogInComponent]
+export const RoutingComponents = [HomeComponent, PostAnimalComponent, OwnerListComponent, SignUpComponent, UserProfileComponent, LogInComponent, AnimalFormContainerComponent, SignInComponent]

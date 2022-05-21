@@ -1,3 +1,6 @@
+import * as https from "https";
+
 export const environment = {
-  production: true
+  production: true,
+  backendUrl:  'https://animal-renting.herokuapp.com/',
 };
