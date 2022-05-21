@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './post-animal.component.html',
   styleUrls: ['./post-animal.component.css']
 })
-export class UserDashboardComponent implements OnInit {
+export class PostAnimalComponent implements OnInit {
 
   constructor() { }
 

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule, RoutingComponents } from './app-routing.module';
@@ -13,6 +13,14 @@ import {MatButtonModule} from "@angular/material/button";
 import {OwnerService} from "./owner.service";
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { LogInComponent } from './log-in/log-in.component';
+import { AnimalFormContainerComponent } from './containers/animal-form-container/animal-form-container.component';
+import { AnimalFormComponent } from './components/animal-form/animal-form.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatSelectModule} from "@angular/material/select";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {AnimalService} from "./service/animal.service";
+import {HttpClientModule} from "@angular/common/http";
+import { SignInComponent } from './sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
@@ -21,17 +29,24 @@ import { LogInComponent } from './log-in/log-in.component';
     RoutingComponents,
     UserProfileComponent,
     LogInComponent,
+    AnimalFormContainerComponent,
+    AnimalFormComponent,
+    SignInComponent,
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatToolbarModule,
-        MatIconModule,
-        MatFormFieldModule,
-        MatButtonModule,
-
-    ],
-  providers: [OwnerService], //this is registering the owner.service
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    MatSelectModule,
+    MatCheckboxModule,
+    HttpClientModule,
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  providers: [AnimalService], //this is registering the owner.service
   bootstrap: [AppComponent]
 }) export class AppModule { }
