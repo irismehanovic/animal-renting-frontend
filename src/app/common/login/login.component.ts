@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import { AuthService } from '../service/auth.service';
+import {AuthService} from "../../service/auth.service";
 import {Router} from "@angular/router";
-import {Route} from "../constants/route.constants";
+import {Route} from "../../constants/route.constants";
 
 @Component({
-  selector: 'app-sign-in',
-  templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class SignInComponent implements OnInit {
+export class LoginComponent implements OnInit {
 
   form: FormGroup | undefined;
 
