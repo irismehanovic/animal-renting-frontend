@@ -2,13 +2,15 @@
   <div class="container">
     <h1>Animal</h1>
 
-    <mat-form-field appearance="outline" floatLabel="auto">
-      <mat-label>Age</mat-label>
-      <input matInput [formControlName]="animalProperty.age">
+
+    <mat-form-field appearance="fill">
+      <mat-label>Textarea</mat-label>
+      <textarea [formControlName]="animalProperty.age" matInput></textarea>
     </mat-form-field>
 
-    <mat-form-field appearance="standard">
-      <mat-label>Rarity</mat-label>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Animal Type</mat-label>
       <mat-select [formControlName]="animalProperty.animalType">
         <mat-select-trigger class="select-trigger-w-icon">
           <ng-container *ngIf="animalType">
@@ -17,32 +19,32 @@
           </ng-container>
         </mat-select-trigger>
         <mat-option *ngFor="let animalType of animalTypes" [value]="animalType.value">
-          <mat-icon [style.color]="animalType.color">diamond</mat-icon>
           {{animalType.label}}
         </mat-option>
       </mat-select>
     </mat-form-field>
 
-    <mat-checkbox [formControlName]="animalProperty.isVaccinated"
-                  color="primary">Vaccinated</mat-checkbox>
-
-    <mat-form-field appearance="standard">
+    <mat-form-field appearance="fill">
       <mat-label>Gender</mat-label>
       <mat-select [formControlName]="animalProperty.gender">
         <mat-select-trigger class="select-trigger-w-icon">
           <ng-container *ngIf="gender">
-            <mat-icon>{{gender.color}}</mat-icon>
             {{gender.label}}
           </ng-container>
         </mat-select-trigger>
         <mat-option *ngFor="let gender of genders" [value]="gender.value">
-          <mat-icon>{{gender.color}}</mat-icon>
           {{gender.label}}
         </mat-option>
       </mat-select>
     </mat-form-field>
+
+    <mat-checkbox [formControlName]="animalProperty.isVaccinated"
+
+                  color="primary">Vaccinated</mat-checkbox>
+
     <button type="submit"
             mat-flat-button
-            color="primary">Save</button>
+            color="primary">Save
+    </button>
   </div>
 </form>
