@@ -12,7 +12,6 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatButtonModule} from "@angular/material/button";
 import {OwnerService} from "./owner.service";
 import { UserProfileComponent } from './user-profile/user-profile.component';
-import { LogInComponent } from './log-in/log-in.component';
 import { AnimalFormContainerComponent } from './containers/animal-form-container/animal-form-container.component';
 import { AnimalFormComponent } from './components/animal-form/animal-form.component';
 import {ReactiveFormsModule} from "@angular/forms";
@@ -28,7 +27,6 @@ import { SignInComponent } from './sign-in/sign-in.component';
     HeaderComponent,
     RoutingComponents,
     UserProfileComponent,
-    LogInComponent,
     AnimalFormContainerComponent,
     AnimalFormComponent,
     SignInComponent,

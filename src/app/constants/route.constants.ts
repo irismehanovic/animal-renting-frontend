@@ -7,4 +7,5 @@ export class Route {
 
   public static ANIMALS = 'animals';
   public static STATS = 'stats';
+  public static SIGNIN = 'sign-in';
 }

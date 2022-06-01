@@ -7,7 +7,6 @@ import {OwnerListComponent} from "./owner-list/owner-list.component";
 import {SignUpComponent} from "./sign-up/sign-up.component";
 import {SignInComponent} from "./sign-in/sign-in.component";
 import {UserProfileComponent} from "./user-profile/user-profile.component";
-import {LogInComponent} from "./log-in/log-in.component";
 import {Route} from './constants/route.constants';
 import {AnimalFormContainerComponent} from "./containers/animal-form-container/animal-form-container.component";
 import {AnimalFormComponent} from "./components/animal-form/animal-form.component";
@@ -22,11 +21,11 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'post-animal',
+    path: 'animal-list',
    component: PostAnimalComponent,
     children: [
         {
-          path: 'create-animal',
+          path: 'post-animal',
           component: AnimalFormComponent,
         },
       ]
@@ -47,10 +46,6 @@ const routes: Routes = [
     path:'user-profile',
     component: UserProfileComponent
   },
-  {
-    path:'log-in',
-    component: LogInComponent
-  }
 ];
 
 @NgModule({
@@ -59,4 +54,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const RoutingComponents = [HomeComponent, PostAnimalComponent, OwnerListComponent, SignUpComponent, UserProfileComponent, LogInComponent, AnimalFormContainerComponent, SignInComponent]
+export const RoutingComponents = [HomeComponent, PostAnimalComponent, OwnerListComponent, SignUpComponent, UserProfileComponent, AnimalFormContainerComponent, SignInComponent]
