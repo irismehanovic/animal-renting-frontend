@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-// @ts-ignore
+
 import { RouterModule, Routes } from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {PostAnimalComponent} from "./post-animal/post-animal.component";
