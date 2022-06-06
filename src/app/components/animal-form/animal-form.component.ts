@@ -4,6 +4,7 @@ import {AnimalGenderEnum, AnimalGenderMapping} from "../../models/animal-gender.
 import {AnimalTypeEnum, AnimalTypeMapping} from "../../models/animal-type.enum";
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {AnimalProperty} from "../../models/animal-property.enum";
+import { CommonModule, CurrencyPipe} from '@angular/common';
 
 @Component({
   selector: 'app-animal-form',
@@ -11,6 +12,7 @@ import {AnimalProperty} from "../../models/animal-property.enum";
   styleUrls: ['./animal-form.component.css']
 })
 export class AnimalFormComponent implements OnInit {
+
 
   @Output()
   saveAnimal: EventEmitter<Animal> = new EventEmitter<Animal>();
@@ -35,7 +37,10 @@ export class AnimalFormComponent implements OnInit {
   public animalProperty = AnimalProperty;
   public isEditable: boolean = true;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private currencyPipe: CurrencyPipe
+) { }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
@@ -51,6 +56,7 @@ export class AnimalFormComponent implements OnInit {
       [AnimalProperty.isVaccinated]: [this.animal?.[AnimalProperty.isVaccinated] || false],
     });
   }
+
 
   public get animalType() {
     const typeValue: AnimalTypeEnum | null = this.form.value[AnimalProperty.animalType];

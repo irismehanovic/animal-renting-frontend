@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Animal} from "../../models/animal.model";
 import {dbAnimals} from '../../utils/fake-db';
-// @ts-ignore
 import {ActivatedRoute, Router} from '@angular/router';
 import {AnimalService} from "../../service/animal.service";
 import {Route} from "../../constants/route.constants";

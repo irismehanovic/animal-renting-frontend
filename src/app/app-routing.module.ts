@@ -7,6 +7,8 @@ import {AnimalFormContainerComponent} from "./containers/animal-form-container/a
 import {AnimalFormComponent} from "./components/animal-form/animal-form.component";
 import {LoginComponent} from "./common/login/login.component";
 import {RegisterComponent} from "./common/register/register.component";
+import {AuthorizedGuard} from "./guards/authorized.guard";
+import {UserProfileComponent} from "./user-profile/user-profile.component";
 
 const routes: Routes = [
   {
@@ -15,6 +17,18 @@ const routes: Routes = [
   },
   {
     path: 'home',
+    component: HomeComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent
+  },
+  {
+    path: Route.USER_PROFILE,
+    component: UserProfileComponent,
+  },
+  {
+    path: 'search/:searchTerm',
     component: HomeComponent
   },
   {
@@ -27,7 +41,8 @@ const routes: Routes = [
   },
   {
     path: 'animal-list',
-   component: PostAnimalComponent,
+    component: PostAnimalComponent,
+    //canActivate: [AuthorizedGuard],
     children: [
         {
           path: 'post-animal',
@@ -44,4 +59,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const RoutingComponents = [HomeComponent, PostAnimalComponent, LoginComponent, AnimalFormContainerComponent, RegisterComponent]
+export const RoutingComponents = [HomeComponent, PostAnimalComponent, LoginComponent, AnimalFormContainerComponent, RegisterComponent, UserProfileComponent]
