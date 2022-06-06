@@ -9,4 +9,5 @@ export class Route {
   public static STATS = 'stats';
   public static LOGIN = 'login';
   public static REGISTER = 'register';
+  public static USER_PROFILE = 'user-profile';
 }

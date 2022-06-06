@@ -21,6 +21,9 @@ import {AuthorizedGuard} from "./guards/authorized.guard";
 import {AuthService} from "./service/auth.service";
 import {provideAuthorizationInterceptor} from "./interceptors/authorization.interceptor";
 import {RegisterComponent} from "./common/register/register.component";
+import { SearchComponent } from './search/search.component';
+import { CommonModule, CurrencyPipe} from '@angular/common';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,8 @@ import {RegisterComponent} from "./common/register/register.component";
     AnimalFormComponent,
     LoginComponent,
     RegisterComponent,
+    SearchComponent,
+    UserProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +51,6 @@ import {RegisterComponent} from "./common/register/register.component";
     HttpClientModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [AnimalService, provideAuthorizationInterceptor(), AuthorizedGuard, AuthService,],
+  providers: [AnimalService, provideAuthorizationInterceptor(), AuthorizedGuard, AuthService, CurrencyPipe],
   bootstrap: [AppComponent]
 }) export class AppModule { }
