@@ -3,16 +3,16 @@
     <h1>Animal</h1>
 
     <label for="age"></label>
-    <input type="text" id="age" name="price" placeholder="Age">
+    <input [formControlName]="animalProperty.age" type="text" id="age" name="age" placeholder="Age">
 
     <label for="price"></label>
-    <input type="number" min="0.00" max="1000.00" step="0.01" id="price" name="price" placeholder="Price per Week">
+    <input [formControlName]="animalProperty.price" type="number" min="0.00" max="1000.00" step="0.01" id="price" name="price" placeholder="Price per Week">
 
     <label for="shortDescription"></label>
-    <input type="text" id="shortDescription" name="shortDescription" placeholder="Short Description">
+    <input [formControlName]="animalProperty.shortDescription" type="text" id="shortDescription" name="shortDescription" placeholder="Short Description">
 
     <label for="longDescription"></label>
-    <textarea type="text" id="longDescription" name="longDescription" placeholder="Long Description"></textarea>
+    <textarea [formControlName]="animalProperty.longDescription" type="text" id="longDescription" name="longDescription" placeholder="Long Description"></textarea>
 
     <mat-form-field appearance="fill">
       <mat-label>Animal Type</mat-label>

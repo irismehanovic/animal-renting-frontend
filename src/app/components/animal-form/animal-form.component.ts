@@ -45,12 +45,10 @@ export class AnimalFormComponent implements OnInit {
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       [AnimalProperty.id]: [this.animal?.[AnimalProperty.id] || ''],
-      [AnimalProperty.owner]: [this.animal?.[AnimalProperty.owner] || '', Validators.required],
       [AnimalProperty.age]: [this.animal?.[AnimalProperty.age] || '', Validators.required],
       [AnimalProperty.price]: [this.animal?.[AnimalProperty.price] || '', Validators.required],
-      [AnimalProperty.shortDescrption]: [this.animal?.[AnimalProperty.shortDescrption] || '', Validators.required],
-      [AnimalProperty.longDescrption]: [this.animal?.[AnimalProperty.longDescrption] || '', Validators.required],
-      [AnimalProperty.location]: [this.animal?.[AnimalProperty.location] || '', Validators.required],
+      [AnimalProperty.shortDescription]: [this.animal?.[AnimalProperty.shortDescription] || '', Validators.required],
+      [AnimalProperty.longDescription]: [this.animal?.[AnimalProperty.longDescription] || '', Validators.required],
       [AnimalProperty.animalType]: [this.animal?.[AnimalProperty.animalType] || false],
       [AnimalProperty.gender]: [this.animal?.[AnimalProperty.gender] || false],
       [AnimalProperty.isVaccinated]: [this.animal?.[AnimalProperty.isVaccinated] || false],
@@ -69,10 +67,11 @@ export class AnimalFormComponent implements OnInit {
   }
 
   public submit(): void {
+    console.log(123);
     if (!this.form.valid) {
       return;
     }
-
+    console.log(123);
     this.saveAnimal.emit(this.form.value);
 
     this.resetForm();
