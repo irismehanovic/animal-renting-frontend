@@ -1,7 +1,7 @@
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 
-import {AppRoutingModule, RoutingComponents} from './app-routing.module';
+import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -24,18 +24,26 @@ import {RegisterComponent} from "./common/register/register.component";
 import { SearchComponent } from './search/search.component';
 import { CommonModule, CurrencyPipe} from '@angular/common';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import {HomeComponent} from "./home/home.component";
+import {PostAnimalComponent} from "./post-animal/post-animal.component";
+import {AnimalsResolver} from "./resolvers/animals-resolver.service";
+import { ComponentsComponent } from './src/app/components/components.component';
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    RoutingComponents,
     AnimalFormContainerComponent,
     AnimalFormComponent,
     LoginComponent,
     RegisterComponent,
     SearchComponent,
     UserProfileComponent,
+    HomeComponent,
+    PostAnimalComponent,
+    ComponentsComponent,
+    AnimalFormContainerComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,8 +57,16 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     MatSelectModule,
     MatCheckboxModule,
     HttpClientModule,
+    MatSlideToggleModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [AnimalService, provideAuthorizationInterceptor(), AuthorizedGuard, AuthService, CurrencyPipe],
+  providers: [
+    AnimalService,
+    provideAuthorizationInterceptor(),
+    AuthorizedGuard,
+    AuthService,
+    CurrencyPipe,
+    AnimalsResolver
+  ],
   bootstrap: [AppComponent]
 }) export class AppModule { }

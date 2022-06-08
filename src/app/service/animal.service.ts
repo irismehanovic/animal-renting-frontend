@@ -7,7 +7,7 @@ import {environment} from "../../environments/environment";
 @Injectable()
 export class AnimalService {
 
-  private readonly baseUrl: string = environment.backendUrl + '/home';
+  private readonly baseUrl: string = environment.backendUrl + '/animals';
 
   constructor(private http:HttpClient) { }
 
@@ -21,6 +21,14 @@ export class AnimalService {
 
   public create(animal:Animal): Observable<Animal> {
     return this.http.post<Animal>(`${this.baseUrl}`, animal);
+  }
+
+  public update(id:string, animal:Animal): Observable<Animal> {
+    return this.http.put<Animal>(`${this.baseUrl}/${id}`, animal);
+  }
+
+  public delete(id:string): Observable<void> {
+    return this.http.delete<void>(`${this.baseUrl}/${id}`);
   }
 
 }

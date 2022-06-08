@@ -7,8 +7,8 @@ export interface Animal {
   [AnimalProperty.owner]: string;
   [AnimalProperty.age]: string;
   [AnimalProperty.price]: string;
-  [AnimalProperty.shortDescrption]: string;
-  [AnimalProperty.longDescrption]: string;
+  [AnimalProperty.shortDescription]: string;
+  [AnimalProperty.longDescription]: string;
   [AnimalProperty.location]: string;
   [AnimalProperty.animalType]: AnimalTypeEnum;
   [AnimalProperty.gender]: AnimalGenderEnum;
