@@ -13,12 +13,12 @@
   <img src="assets/profile-image.png" alt="icon">
   <h1>Register</h1>
   <form [formGroup]="form" (ngSubmit)="submit()">
-    <input type="text" class="input-box" placeholder="first name">
-    <input type="text" class="input-box" placeholder="last name">
-    <input type="email" class="input-box" placeholder="email">
-    <input type="text" class="input-box" placeholder="username">
-    <input type="password" class="input-box" placeholder="password">
-    <input type="text" class="input-box" placeholder="phone number">
+    <input [formControlName]="usersProperty.firstName" type="text" class="input-box" placeholder="first name">
+    <input [formControlName]="usersProperty.lastName" type="text" class="input-box" placeholder="last name">
+    <input [formControlName]="usersProperty.email" type="email" class="input-box" placeholder="email">
+    <input [formControlName]="usersProperty.username" type="text" class="input-box" placeholder="username">
+    <input [formControlName]="usersProperty.password" type="password" class="input-box" placeholder="password">
+    <input [formControlName]="usersProperty.phoneNumber" type="text" class="input-box" placeholder="phone number">
 
     <mat-form-field appearance="fill">
       <mat-label>User Type</mat-label>
@@ -49,7 +49,10 @@
     </mat-form-field>
 
 
-    <button type="button" class="sign-btn">Register</button>
+    <button
+      type="submit"
+      class="sign-btn">Register
+    </button>
 
   </form>
 

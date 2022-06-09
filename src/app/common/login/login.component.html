@@ -11,10 +11,10 @@
   <img src="assets/profile-image.png" alt="icon">
   <h1>Login</h1>
   <form (submit)="handleFormSubmit()" [formGroup]="form!">
-    <input type="text" class="input-box" placeholder="username">
-    <input type="password" class="input-box" placeholder="password">
+    <input type="text" class="input-box" placeholder="username" formControlName="email">
+    <input type="password" class="input-box" placeholder="password" formControlName="password">
 
-    <button type="button" class="sign-btn" type="submit">Login</button>
+    <button class="sign-btn" type="submit">Login</button>
     <p>Don't have an account ? <a href="#" routerLink="/register">Register</a></p>
   </form>
 </div>
