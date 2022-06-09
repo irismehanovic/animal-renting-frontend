@@ -67,11 +67,9 @@ export class AnimalFormComponent implements OnInit {
   }
 
   public submit(): void {
-    console.log(123);
     if (!this.form.valid) {
       return;
     }
-    console.log(123);
     this.saveAnimal.emit(this.form.value);
 
     this.resetForm();

@@ -18,4 +18,5 @@ export const dbAnimals: Animal[] = [
     [AnimalProperty.isVaccinated]: false,
 
   }
+
 ];

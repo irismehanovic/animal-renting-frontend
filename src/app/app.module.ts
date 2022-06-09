@@ -27,8 +27,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import {HomeComponent} from "./home/home.component";
 import {PostAnimalComponent} from "./post-animal/post-animal.component";
 import {AnimalsResolver} from "./resolvers/animals-resolver.service";
-import { ComponentsComponent } from './src/app/components/components.component';
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import {RegisterContainerComponent} from "./containers/register-container/register-container.component";
 
 @NgModule({
   declarations: [
@@ -42,8 +42,8 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
     UserProfileComponent,
     HomeComponent,
     PostAnimalComponent,
-    ComponentsComponent,
     AnimalFormContainerComponent,
+    RegisterContainerComponent,
   ],
   imports: [
     BrowserModule,

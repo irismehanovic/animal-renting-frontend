@@ -6,11 +6,14 @@ import {SignInForm} from '../models/auth/sign-in-form.interface';
 import {AuthResponse} from '../models/auth/auth-response.interface';
 import {Router} from '@angular/router';
 import {Route} from '../constants/route.constants';
+import {RegisterForm} from "../models/auth/register-form.interface";
+import {AnimalService} from "./animal.service";
 
 @Injectable()
 export class AuthService {
 
   private readonly baseUrl: string = `${environment.backendUrl}/authenticate`;
+  private readonly  registerUrl: string = `${environment.backendUrl}/signup`;
 
   private jwt: string | null = null;
 
@@ -40,6 +43,18 @@ export class AuthService {
 
   public goToLogin():void {
     this.router.navigate([Route.LOGIN]);
+  }
+
+
+  public register(registerForm: RegisterForm): Observable<void> {
+
+    console.log(this.baseUrl);
+    return this.http.post<AuthResponse>(`${this.registerUrl}`, registerForm).pipe(
+      mergeMap(response => {
+        this.jwt = response.token;
+        return of(undefined);
+      })
+    );
   }
 
 }
