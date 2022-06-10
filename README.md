@@ -1,6 +1,42 @@
-# PetRent
+# Animal Renting
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
+##**Description**
+
+- Animal Renting is an application that offers users to rent, view and/or post their pets for rent. 
+- Users can make their own profile by registering.
+- Once the account is made, users can log in and see their profile. 
+- On the homepage there is an option to add an animal to the profile and an option to search for an animal. 
+- In order to add an animal, users must fill out a form regarding details about the animal. 
+- Once the animal is added it is visible to anyone on the website. 
+- Pets are available for rent for a certain amount of time which the owner specifies. 
+- Price of rent is decided by the owner as well. 
+- Users contact eachother either by phone or email. 
+
+**This project was generated with**:
+- Angular CLI version 13.2.6
+- JDK 17
+- Java Spring Boot framework version 2.7.0. 
+- Dependencies: Spring Web and Lombok
+
+IDE used for this project was IntelliJ IDEA.
+
+##**Instructions**
+1. Fork this Repository
+2. Clone the repository
+   git clone https://github.com/irismehanovic/animal-renting-frontend.git
+3. Add your scripts
+4. Commit & Push
+    git commit -m
+    git push origin main
+5. Create a pull request
+6. Wait for Pull Request to merge
+
+##**Future implementation**
+
+Additional features that are planned to be implemented on the application:
+- Adding direct messages between users
+- Adding different types of animals 
+- Adding functional search by category
 
 ## Development server
 
