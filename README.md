@@ -1,6 +1,6 @@
 # Animal Renting
 
-##**Description**
+##Description
 
 - Animal Renting is an application that offers users to rent, view and/or post their pets for rent. 
 - Users can make their own profile by registering.
@@ -20,7 +20,7 @@
 
 IDE used for this project was IntelliJ IDEA.
 
-##**Instructions**
+##Instructions
 1. Fork this Repository
 2. Clone the repository
    git clone https://github.com/irismehanovic/animal-renting-frontend.git
@@ -31,7 +31,7 @@ IDE used for this project was IntelliJ IDEA.
 5. Create a pull request
 6. Wait for Pull Request to merge
 
-##**Future implementation**
+##Future implementation
 
 Additional features that are planned to be implemented on the application:
 - Adding direct messages between users
