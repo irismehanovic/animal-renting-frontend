@@ -29,6 +29,7 @@ import {PostAnimalComponent} from "./post-animal/post-animal.component";
 import {AnimalsResolver} from "./resolvers/animals-resolver.service";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {RegisterContainerComponent} from "./containers/register-container/register-container.component";
+import {UserService} from "./service/user.service";
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import {RegisterContainerComponent} from "./containers/register-container/regist
     AuthorizedGuard,
     AuthService,
     CurrencyPipe,
-    AnimalsResolver
+    AnimalsResolver,
+    UserService,
   ],
   bootstrap: [AppComponent]
 }) export class AppModule { }

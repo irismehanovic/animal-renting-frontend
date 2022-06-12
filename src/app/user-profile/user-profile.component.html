@@ -8,7 +8,7 @@
             <div class="d-flex flex-column align-items-center text-center">
               <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
               <div class="mt-3">
-                <h4>username</h4>
+                <h4>{{user.username}}</h4>
               </div>
             </div>
           </div>
@@ -23,7 +23,7 @@
                 <h6 class="mb-0">Full Name</h6>
               </div>
               <div class="col-sm-9 text-secondary">
-                Kenneth Valdez
+                {{user.firstName + ' ' + user.lastName}}
               </div>
             </div>
 
@@ -33,7 +33,7 @@
                 <h6 class="mb-0">Email</h6>
               </div>
               <div class="col-sm-9 text-secondary">
-                fip@jukmuh.al
+                {{user.email}}
               </div>
             </div>
             <hr>
@@ -43,7 +43,7 @@
                 <h6 class="mb-0">Phone</h6>
               </div>
               <div class="col-sm-9 text-secondary">
-                (239) 816-9029
+                {{user.phoneNumber}}
               </div>
             </div>
             <hr>
@@ -53,7 +53,7 @@
                 <h6 class="mb-0">City</h6>
               </div>
               <div class="col-sm-9 text-secondary">
-                (320) 380-4539
+                {{user.city}}
               </div>
             </div>
             <hr>
@@ -61,34 +61,52 @@
             <div class="row">
               <div class="col-sm-12">
                 <a class="btn btn-light" target="__blank" routerLink="user-profile">Edit Profile</a>
+<!--                <a class="btn btn-light" target="__blank" routerLink="/animal-list">Rent a Pet</a>-->
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <button class="rent-button" routerLink="/animal-list">Rent a pet
+      <img class="cat" src="assets/cats.png">
+    </button>
+
   </div>
 
-  <div class="animals">
-    <nav>
-      <img src="assets/persian.jpg" alt="Persian cat">
-      <p><span style="font-weight: bold">Persian cat</span>
-        <br>
-        <span style="color: #e68fac">Sarajevo</span> <br>
-        <span style="font-weight: bold; font-size: 20px">5$/Day</span>  <br>
-        <button>View</button>
-      </p>
-    </nav>
 
-    <nav>
-      <img src="assets/british.jpeg" alt="British cat">
-      <p><span style="font-weight: bold">British Shorthair</span>
+
+  <div class="animals">
+    <nav *ngFor="let animal of animals">
+      <img src="assets/persian.jpg" alt="Persian cat">
+      <p><span style="font-weight: bold">{{animal.animalType}}</span>
         <br>
-        <span style="color: #e68fac">Sarajevo</span> <br>
-        <span style="font-weight: bold; font-size: 20px">6$/Day</span>  <br>
+        <span style="color: #e68fac">{{animal.shortDescription}}</span> <br>
+        <span style="font-weight: bold; font-size: 20px">{{animal.price}}</span>  <br>
         <button>View</button>
       </p>
     </nav>
+    <table>
+      <tbody>
+      <tr *ngFor="let animal of animals">
+        <td>{{animal.age}}</td>
+        <td>{{animal.price}}</td>
+        <td>{{animal.shortDescription}}</td>
+        <td>{{animal.longDescription}}</td>
+        <td>{{animal.animalType}}</td>
+        <td>{{animal.gender}}</td>
+        <td>{{animal.isVaccinated}}</td>
+        <td>
+          <button class="btn btn-success">Edit</button>
+          <button class="btn btn-danger mx-3" (click)="remove(animal)" >Delete</button>
+          <button class="btn btn-primary"  >View</button>
+
+        </td>
+      </tbody>
+    </table>
+
+
 
   </div>
 

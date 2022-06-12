@@ -6,7 +6,6 @@ import {Route} from './constants/route.constants';
 import {AnimalFormContainerComponent} from "./containers/animal-form-container/animal-form-container.component";
 import {LoginComponent} from "./common/login/login.component";
 import {RegisterComponent} from "./common/register/register.component";
-import {AuthorizedGuard} from "./guards/authorized.guard";
 import {UserProfileComponent} from "./user-profile/user-profile.component";
 import {AnimalsResolver} from "./resolvers/animals-resolver.service";
 
@@ -24,7 +23,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: Route.USER_PROFILE,
+    path: Route.USER_PROFILE + '/:id',
     component: UserProfileComponent,
   },
   {

@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
 
     if (this.form!.valid) {
       this.authService.logIn({ ...this.form!.value }).subscribe(() => {
-        this.router.navigate([Route.USER_PROFILE]);
+        this.router.navigate([Route.USER_PROFILE + '/' + localStorage.getItem('id')]);
       });
     } else console.log(123)
   }

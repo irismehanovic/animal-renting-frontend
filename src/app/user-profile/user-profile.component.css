@@ -1,51 +1,3 @@
-/*.profile-img{*/
-/*  width:200px;*/
-/*  height: 160px;*/
-/*}*/
-
-/*main {*/
-/*  width: 1200px;*/
-/*  display: flex;*/
-/*  justify-content: space-around;*/
-/*  align-items: center;*/
-/*  margin: 0 auto;*/
-/*}*/
-
-/*nav{*/
-/*  align-items: center;*/
-/*  display: block;*/
-/*  justify-content: space-evenly;*/
-/*  background-color: #ffe4e1;*/
-/*  width: 200px;*/
-/*  height: 300px;*/
-/*  margin: 10px;*/
-/*  border-radius: 5px;*/
-/*  border: 1px solid hotpink;*/
-/*}*/
-
-/*nav img{*/
-/*  width: 200px;*/
-/*  height: 160px;*/
-/*  border-radius: 5px;*/
-/*  margin-bottom: 10px;*/
-/*}*/
-
-/*nav p{*/
-/*  text-align: center;*/
-/*}*/
-
-/*nav button, .edit-profile{*/
-/*  margin-top: 8px;*/
-/*  width: 80px;*/
-/*  height: 30px;*/
-/*  color: darksalmon;*/
-/*  font-size: 15px;*/
-/*  font-weight: bold;*/
-/*  border-radius: 5px;*/
-/*  border: 1px solid hotpink;*/
-/*}*/
-
-
 body{
   margin-top:20px;
   color: #1a202c;
@@ -137,3 +89,25 @@ nav button, .edit-profile{
   border-radius: 5px;
   border: 1px solid hotpink;
 }
+
+.cat{
+  height: 40px;
+  width: 40px;
+}
+
+.rent-button{
+  background-color: #ffe4e1;
+  margin: 0px;
+  margin-top: 0px;
+  height: 50px;
+  width: 140px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid hotpink;
+}
+
