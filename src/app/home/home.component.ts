@@ -5,6 +5,7 @@ import {Route} from "../constants/route.constants";
 import {AnimalGenderMapping} from "../models/animal-gender.enum";
 import {AnimalTypeMapping} from "../models/animal-type.enum";
 import {ActivatedRoute} from "@angular/router";
+import {AnimalService} from "../service/animal.service";
 
 @Component({
   selector: 'app-home',
@@ -13,8 +14,8 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class HomeComponent implements OnInit {
 
-  @Input()
-  animals: Animal[] | null = [];
+
+   public animals: Animal[] | null = [];
 
   @Output()
   removeAnimal: EventEmitter<Animal> = new EventEmitter<Animal>()
@@ -35,14 +36,15 @@ export class HomeComponent implements OnInit {
   }
 
 
-  constructor(private activatedRoute:ActivatedRoute) {
+  constructor(private activatedRoute:ActivatedRoute, private animalService:AnimalService) {
 
   }
 
   ngOnInit(): void {
-    this.activatedRoute.data.subscribe((response:any)=>{
-      this.animals=response.animals
-    })
+    this.animalService.getAnimals().subscribe((response:any)=>{
+        this.animals = response
+      }
+    )
   }
 
 }

@@ -13,4 +13,5 @@ export interface Animal {
   [AnimalProperty.animalType]: AnimalTypeEnum;
   [AnimalProperty.gender]: AnimalGenderEnum;
   [AnimalProperty.isVaccinated]?: boolean;
+  [AnimalProperty.userId]?: string;
 }
