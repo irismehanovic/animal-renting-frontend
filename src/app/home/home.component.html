@@ -12,54 +12,51 @@
 <router-outlet></router-outlet>
 
 <main>
-  <button class="rent-button" routerLink="/animal-list">Rent a pet
-    <img class="cat" src="assets/cats.png">
-  </button>
-  <button class="rent-button">Look for a pet
-    <img class="dog" src="assets/dog.png">
-  </button>
 
-
-  <nav>
+  <nav *ngFor="let animal of animals">
     <img src="assets/persian.jpg" alt="Persian cat">
-    <p><span style="font-weight: bold">Persian cat</span>
+    <p><span style="font-weight: bold">{{animal.animalType}}</span>
       <br>
-      <span style="color: #e68fac">Sarajevo</span> <br>
-      <span style="font-weight: bold; font-size: 20px">5KM/week</span>  <br>
+      <span style="color: #e68fac">{{animal.shortDescription}}</span> <br>
+      <span style="font-weight: bold; font-size: 20px">{{animal.price}}</span>  <br>
 
       <button type="submit">Rent</button>
     </p>
   </nav>
-  <nav>
-    <img src="assets/british.jpeg" alt="British cat">
-    <p><span style="font-weight: bold">British Shorthair</span>
-      <br>
-      <span style="color: #e68fac">Sarajevo</span> <br>
-      <span style="font-weight: bold; font-size: 20px">6KM/Week</span>  <br>
 
-      <button type="submit">Rent</button>
-    </p>
-  </nav>
-  <nav>
-    <img src="assets/shihtzu.jpg" alt="Shih Tzu">
-    <p><span style="font-weight: bold">Shih Tzu</span>
-      <br>
-      <span style="color: #e68fac">Sarajevo</span> <br>
-      <span style="font-weight: bold; font-size: 20px">5KM/Day</span>  <br>
 
-      <button type="submit">Rent</button>
-    </p>
-  </nav>
-  <nav>
-    <img src="assets/parrot.jpg" alt="Parrot">
-    <p><span style="font-weight: bold">Parrot</span>
-      <br>
-      <span style="color: #e68fac">Sarajevo</span> <br>
-      <span style="font-weight: bold; font-size: 20px">4KM/Day</span>  <br>
 
-      <button type="submit">Rent</button>
-    </p>
-  </nav>
+
+<!--  <nav>-->
+<!--    <img src="assets/british.jpeg" alt="British cat">-->
+<!--    <p><span style="font-weight: bold">British Shorthair</span>-->
+<!--      <br>-->
+<!--      <span style="color: #e68fac">Sarajevo</span> <br>-->
+<!--      <span style="font-weight: bold; font-size: 20px">6KM/Week</span>  <br>-->
+
+<!--      <button type="submit">Rent</button>-->
+<!--    </p>-->
+<!--  </nav>-->
+<!--  <nav>-->
+<!--    <img src="assets/shihtzu.jpg" alt="Shih Tzu">-->
+<!--    <p><span style="font-weight: bold">Shih Tzu</span>-->
+<!--      <br>-->
+<!--      <span style="color: #e68fac">Sarajevo</span> <br>-->
+<!--      <span style="font-weight: bold; font-size: 20px">5KM/Day</span>  <br>-->
+
+<!--      <button type="submit">Rent</button>-->
+<!--    </p>-->
+<!--  </nav>-->
+<!--  <nav>-->
+<!--    <img src="assets/parrot.jpg" alt="Parrot">-->
+<!--    <p><span style="font-weight: bold">Parrot</span>-->
+<!--      <br>-->
+<!--      <span style="color: #e68fac">Sarajevo</span> <br>-->
+<!--      <span style="font-weight: bold; font-size: 20px">4KM/Day</span>  <br>-->
+
+<!--      <button type="submit">Rent</button>-->
+<!--    </p>-->
+<!--  </nav>-->
 </main>
 
 

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Animal} from "../models/animal.model";
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
+  @Input()
+  animals: Animal[] | null = [];
+
+  @Output()
+  removeAnimal: EventEmitter<Animal> = new EventEmitter<Animal>()
 
   constructor() { }
 
