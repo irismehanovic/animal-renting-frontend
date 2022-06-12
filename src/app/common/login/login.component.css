@@ -3,7 +3,7 @@ body {
   padding: 0;
 }
 
-.sign-up-form {
+.sign-in-form {
   width: 350px;
   box-shadow: 0 0 3px rgba(0,0,0,0.3);
   background: #fff;
@@ -12,21 +12,21 @@ body {
   text-align: center;
 }
 
-.sign-up-form input {
+.sign-in-form input {
   margin-bottom: 5px;
 }
 
-.sign-up-form .sign-btn {
+.sign-in-form .sign-btn {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.sign-up-form h1 {
+.sign-in-form h1 {
   color: #ff8786;
   margin-bottom: 30px;
 }
 
-.sign-up-form .input-box {
+.sign-in-form .input-box {
   border-radius: 20px;
   padding: 10px;
   margin: 10px 0px;
@@ -34,7 +34,7 @@ body {
   border: 1px solid #999;
   outline: none;
 }
-.sign-up-form button {
+.sign-in-form button {
   background: #ff8786;
   color: #fff;
   width: 80%;

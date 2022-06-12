@@ -9,21 +9,19 @@
 </head>
 
 <header>
-  <div>
-    <button mat-icon-button color="white" routerLink="/home" class="home-icon"> <mat-icon>home</mat-icon> </button>
-    <p>PET RENT</p>
-    <img src="assets/paws.png" alt="paws">
-  </div>
-  <input class="search" type="text" placeholder="Search for a pet">
-  <div>
-    <ul>
-      <li>
-        <a target="_self" routerLink="/sign-up" routerLinkActive="active">Log In</a>
-      </li>
-      <li>
-        <a target="_self" routerLink="/user-profile" routerLinkActive="active">Profile</a>
-      </li>
-    </ul>
+  <div class="container">
+    <div class="one">
+      <button mat-icon-button color="white" routerLink="/home" class="home-icon"> <mat-icon>home</mat-icon> </button>
+      <p>PET RENT</p>
+      <img src="assets/paws.png" alt="paws">
+    </div>
+    <div clas="two">
+      <ul>
+        <li>
+          <a target="_self" routerLink="/login" routerLinkActive="active">Profile</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </header>
 

@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="register.component.css">
+</head>
+<body>
+
+
+<div class="sign-up-form">
+  <img src="assets/profile-image.png" alt="icon">
+  <h1>Register</h1>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <input [formControlName]="usersProperty.firstName" type="text" class="input-box" placeholder="first name">
+    <input [formControlName]="usersProperty.lastName" type="text" class="input-box" placeholder="last name">
+    <input [formControlName]="usersProperty.email" type="email" class="input-box" placeholder="email">
+    <input [formControlName]="usersProperty.username" type="text" class="input-box" placeholder="username">
+    <input [formControlName]="usersProperty.password" type="password" class="input-box" placeholder="password">
+    <input [formControlName]="usersProperty.phoneNumber" type="text" class="input-box" placeholder="phone number">
+
+    <mat-form-field appearance="fill">
+      <mat-label>User Type</mat-label>
+      <mat-select [formControlName]="usersProperty.userType">
+        <mat-select-trigger class="select-trigger-w-icon">
+          <ng-container *ngIf="usersType">
+            {{usersType.label}}
+          </ng-container>
+        </mat-select-trigger>
+        <mat-option *ngFor="let usersType of usersTypes" [value]="usersType.value">
+          {{usersType.label}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>City</mat-label>
+      <mat-select [formControlName]="usersProperty.city">
+        <mat-select-trigger class="select-trigger-w-icon">
+          <ng-container *ngIf="city">
+            {{city.label}}
+          </ng-container>
+        </mat-select-trigger>
+        <mat-option *ngFor="let city of usersCities" [value]="city.value">
+          {{city.label}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <button
+      type="submit"
+      class="sign-btn">Register
+    </button>
+    <p> Go back to <a href="#" routerLink="/login">LogIn</a></p>
+
+  </form>
+
+</div>
+
+
+
+
+</body>
+</html>
