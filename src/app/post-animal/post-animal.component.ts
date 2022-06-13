@@ -1,5 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {Animal} from "../models/animal.model";
 import {AnimalProperty} from "../models/animal-property.enum";
 import {Route} from "../constants/route.constants";
@@ -24,7 +24,6 @@ export class PostAnimalComponent implements OnInit {
   public route = Route;
 
   public remove(animal: Animal): void {
-    //this.removeAnimal.emit(animal);
 
     console.log(animal)
 
@@ -45,6 +44,10 @@ export class PostAnimalComponent implements OnInit {
 
   }
 
+  public update(animal: Animal) {
+    this.router.navigate(['/animal-list/animal/' + animal[AnimalProperty.id]]);
+  }
+
   getGender(animal: Animal) {
     return AnimalGenderMapping[animal[AnimalProperty.gender]].value;
   }
@@ -54,7 +57,7 @@ export class PostAnimalComponent implements OnInit {
   }
 
 
-  constructor(private activatedRoute:ActivatedRoute, private animalService: AnimalService) {
+  constructor(private activatedRoute:ActivatedRoute, private animalService: AnimalService, private router: Router) {
 
   }
 

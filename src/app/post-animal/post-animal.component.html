@@ -41,7 +41,7 @@
       <td>{{animal.gender}}</td>
       <td>{{animal.isVaccinated}}</td>
       <td>
-        <button class="btn btn-success">Edit</button>
+        <button class="btn btn-success" (click)="update(animal)">Edit</button>
         <button class="btn btn-danger mx-3" (click)="remove(animal)" >Delete</button>
         <button class="btn btn-primary"  >View</button>
 
