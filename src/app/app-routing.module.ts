@@ -8,6 +8,7 @@ import {LoginComponent} from "./common/login/login.component";
 import {RegisterComponent} from "./common/register/register.component";
 import {UserProfileComponent} from "./user-profile/user-profile.component";
 import {AnimalsResolver} from "./resolvers/animals-resolver.service";
+import {AnimalEditComponent} from "./animal-edit/animal-edit.component";
 
 const routes: Routes = [
   {
@@ -51,6 +52,11 @@ const routes: Routes = [
           component: AnimalFormContainerComponent,
         },
       ]
+  },
+  {
+    path: 'animal-list/animal/:id' ,
+    component: AnimalEditComponent,
+
   },
 
 ];

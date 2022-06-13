@@ -31,6 +31,7 @@ import {AnimalsResolver} from "./resolvers/animals-resolver.service";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {RegisterContainerComponent} from "./containers/register-container/register-container.component";
 import {UserService} from "./service/user.service";
+import {AnimalEditComponent} from "./animal-edit/animal-edit.component";
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import {UserService} from "./service/user.service";
     PostAnimalComponent,
     AnimalFormContainerComponent,
     RegisterContainerComponent,
+    AnimalEditComponent,
   ],
   imports: [
     BrowserModule,

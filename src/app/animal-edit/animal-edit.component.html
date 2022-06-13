@@ -1,0 +1,55 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div class="container">
+    <h1>Animal</h1>
+
+    <label for="age"></label>
+    <input [formControlName]="animalProperty.age" type="text" id="age" name="age" placeholder="Age">
+
+    <label for="price"></label>
+    <input [formControlName]="animalProperty.price" type="number" min="0.00" max="1000.00" step="0.01" id="price" name="price" placeholder="Price per Week">
+
+    <label for="shortDescription"></label>
+    <input [formControlName]="animalProperty.shortDescription" type="text" id="shortDescription" name="shortDescription" placeholder="Short Description">
+
+    <label for="longDescription"></label>
+    <textarea [formControlName]="animalProperty.longDescription" type="text" id="longDescription" name="longDescription" placeholder="Long Description"></textarea>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Animal Type</mat-label>
+      <mat-select [formControlName]="animalProperty.animalType">
+        <mat-select-trigger class="select-trigger-w-icon">
+          <ng-container *ngIf="animalType">
+            {{animalType.label}}
+          </ng-container>
+        </mat-select-trigger>
+        <mat-option *ngFor="let animalType of animalTypes" [value]="animalType.value">
+          {{animalType.label}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Gender</mat-label>
+      <mat-select [formControlName]="animalProperty.gender">
+        <mat-select-trigger class="select-trigger-w-icon">
+          <ng-container *ngIf="gender">
+            {{gender.label}}
+          </ng-container>
+        </mat-select-trigger>
+        <mat-option *ngFor="let gender of genders" [value]="gender.value">
+          {{gender.label}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-checkbox [formControlName]="animalProperty.isVaccinated"
+                  color="primary">Vaccinated</mat-checkbox>
+
+    <button type="submit"
+            mat-flat-button
+            color="primary">Save
+    </button>
+  </div>
+
+
+</form>
