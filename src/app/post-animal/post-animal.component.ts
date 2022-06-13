@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {Animal} from "../models/animal.model";
 import {AnimalProperty} from "../models/animal-property.enum";
@@ -24,7 +24,25 @@ export class PostAnimalComponent implements OnInit {
   public route = Route;
 
   public remove(animal: Animal): void {
-    this.removeAnimal.emit(animal);
+    //this.removeAnimal.emit(animal);
+
+    console.log(animal)
+
+    const animal_id: string | undefined = animal[AnimalProperty.id];
+
+    if (animal_id===undefined) throw "Error with deleting"
+
+    this.animalService.delete(animal_id).subscribe((response:any)=>{
+         // this.animals = response
+        const userId: string | null = localStorage.getItem("id");
+        if (userId===null) throw "Error with id"
+        this.animalService.getUserAnimals(userId).subscribe((response:any)=>{
+            this.animals = response
+          }
+        )
+        }
+      )
+
   }
 
   getGender(animal: Animal) {
