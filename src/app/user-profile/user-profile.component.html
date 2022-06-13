@@ -88,24 +88,6 @@
         <button>View</button>
       </p>
     </nav>
-    <table>
-      <tbody>
-      <tr *ngFor="let animal of animals">
-        <td>{{animal.age}}</td>
-        <td>{{animal.price}}</td>
-        <td>{{animal.shortDescription}}</td>
-        <td>{{animal.longDescription}}</td>
-        <td>{{animal.animalType}}</td>
-        <td>{{animal.gender}}</td>
-        <td>{{animal.isVaccinated}}</td>
-        <td>
-          <button class="btn btn-success">Edit</button>
-          <button class="btn btn-danger mx-3" (click)="remove(animal)" >Delete</button>
-          <button class="btn btn-primary"  >View</button>
-
-        </td>
-      </tbody>
-    </table>
 
 
 

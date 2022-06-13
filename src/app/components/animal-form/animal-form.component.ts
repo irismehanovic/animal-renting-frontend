@@ -43,6 +43,10 @@ export class AnimalFormComponent implements OnInit {
 ) { }
 
   ngOnInit(): void {
+    const user_id: string | null = localStorage.getItem('id');
+    if (user_id===null) {
+      throw "Error initializing id";
+    }
     this.form = this.formBuilder.group({
       [AnimalProperty.id]: [this.animal?.[AnimalProperty.id] || ''],
       [AnimalProperty.age]: [this.animal?.[AnimalProperty.age] || '', Validators.required],
@@ -52,6 +56,8 @@ export class AnimalFormComponent implements OnInit {
       [AnimalProperty.animalType]: [this.animal?.[AnimalProperty.animalType] || false],
       [AnimalProperty.gender]: [this.animal?.[AnimalProperty.gender] || false],
       [AnimalProperty.isVaccinated]: [this.animal?.[AnimalProperty.isVaccinated] || false],
+      [AnimalProperty.userId]: [user_id],
+
     });
   }
 

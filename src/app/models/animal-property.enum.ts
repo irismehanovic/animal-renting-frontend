@@ -9,4 +9,5 @@ export enum AnimalProperty {
   animalType = 'animalType',
   gender = 'gender',
   isVaccinated = 'isVaccinated',
+  userId = 'userId'
 }

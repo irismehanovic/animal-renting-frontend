@@ -15,6 +15,10 @@ export class AnimalService {
     return this.http.get<Animal[]>(this.baseUrl);
   }
 
+  public getUserAnimals(user_id: string): Observable<Animal[]> {
+    return this.http.get<Animal[]>(this.baseUrl + '/user/' +  user_id);
+  }
+
   public getAnimal(id:string): Observable<Animal> {
     return this.http.get<Animal>(`${this.baseUrl}/${id}`);
   }

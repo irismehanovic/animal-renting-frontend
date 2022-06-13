@@ -8,6 +8,7 @@ import {ActivatedRoute} from "@angular/router";
 import {UserService} from "../service/user.service";
 import {Users} from "../models/user.model";
 import {UsersProperty} from "../models/users-property.enum";
+import {AnimalService} from "../service/animal.service";
 
 @Component({
   selector: 'app-user-profile',
@@ -19,8 +20,8 @@ export class UserProfileComponent implements OnInit {
   private id: string | null;
   public user: Users | any = '';
 
-  @Input()
-  animals: Animal[] | null = [];
+  // @Input()
+  public animals: Animal[] | null = [];
 
   @Output()
   removeAnimal: EventEmitter<Animal> = new EventEmitter<Animal>()
@@ -41,21 +42,23 @@ export class UserProfileComponent implements OnInit {
   }
 
 
-  constructor(private activatedRoute:ActivatedRoute, private userService: UserService) {
+  constructor(private activatedRoute:ActivatedRoute, private userService: UserService, private animalService: AnimalService) {
     this.id = null;
     }
 
   ngOnInit(): void {
 
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
-    console.log(this.id)
-    this.activatedRoute.data.subscribe((response:any)=>{
-      this.animals=response.animals
-    })
 
     if (this.id===null) {
       throw "there was error in fetching id"
     }
+
+    this.animalService.getUserAnimals(this.id).subscribe((response:any)=>{
+        this.animals = response
+        //console.log(this.animals);
+      }
+    )
 
     this.userService.getUser(this.id).subscribe((response:any)=>{
       this.user = response

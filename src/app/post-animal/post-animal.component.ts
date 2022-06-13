@@ -5,6 +5,7 @@ import {AnimalProperty} from "../models/animal-property.enum";
 import {Route} from "../constants/route.constants";
 import {AnimalGenderMapping} from "../models/animal-gender.enum";
 import {AnimalTypeMapping} from "../models/animal-type.enum";
+import {AnimalService} from "../service/animal.service";
 
 @Component({
   selector: 'post-animal',
@@ -13,8 +14,8 @@ import {AnimalTypeMapping} from "../models/animal-type.enum";
 })
 export class PostAnimalComponent implements OnInit {
 
-  @Input()
-  animals: Animal[] | null = [];
+
+  public animals: Animal[] | null = [];
 
   @Output()
   removeAnimal: EventEmitter<Animal> = new EventEmitter<Animal>()
@@ -35,14 +36,17 @@ export class PostAnimalComponent implements OnInit {
   }
 
 
-  constructor(private activatedRoute:ActivatedRoute) {
+  constructor(private activatedRoute:ActivatedRoute, private animalService: AnimalService) {
 
   }
 
   ngOnInit(): void {
-    this.activatedRoute.data.subscribe((response:any)=>{
-      this.animals=response.animals
-    })
+    const userId: string | null = localStorage.getItem("id");
+    if (userId===null) throw "Error with id"
+    this.animalService.getUserAnimals(userId).subscribe((response:any)=>{
+        this.animals = response
+      }
+    )
   }
 
 }
